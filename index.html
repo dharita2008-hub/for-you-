@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Party - Manu! 🎂</title>
+    <style>
+        /* === CSS: O ESTILO DA FESTA === */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Fundo Azul com efeito de confetes */
+            background-color: #e0f7fa;
+            background-image: radial-gradient(#b3e5fc 20%, transparent 20%),
+                              radial-gradient(#81d4fa 20%, transparent 20%);
+            background-size: 50px 50px;
+            background-position: 0 0, 25px 25px;
+            color: #01579b;
+        }
+
+        .cartao-festa {
+            background: rgba(255, 255, 255, 0.96);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            max-width: 400px;
+            width: 100%;
+            border: 4px dashed #0277bd;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Balão animado no topo */
+        .cartao-festa::before {
+            content: '🎈';
+            position: absolute;
+            top: -30px;
+            right: 10px;
+            font-size: 50px;
+            animation: flutuar 3s ease-in-out infinite;
+        }
+
+        @keyframes flutuar {
+            0%, 100% { transform: translateY(0) rotate(5deg); }
+            50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #0277bd;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { font-size: 2rem; margin: 10px 0; color: #0277bd; }
+
+        .botoes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .btn-link {
+            background: #0288d1;
+            color: white;
+            padding: 12px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-link:hover {
+            background: #01579b;
+            transform: scale(1.05);
+        }
+
+        .player-musica {
+            margin-top: 15px;
+            width: 100%;
+            height: 40px;
+        }
+
+        .foto-secundaria {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 2px solid #b3e5fc;
+        }
+
+        .rodape { font-size: 0.7rem; color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="cartao-festa">
+        <img src="foto1.jpg" alt="Manu" class="foto-perfil">
+
+        <h1>Parabéns, Manu! 🥳</h1>
+        <p>A Emanuela este site/página web é só pra ti... cê merece isso e muito mais ! 💙</p>
+
+        <p style="font-size: 0.8rem; margin-bottom: 5px;">🎵 Ouve a nossa música:</p>
+        <audio controls class="player-musica">
+            <source src="musica.mp3" type="audio/mpeg">
+            O teu telemóvel não suporta áudio.
+        </audio>
+
+        <div class="botoes-grid">
+            <button class="btn-link" onclick="surpresa()">Mensagem 💌</button>
+            <button class="btn-link" onclick="presente()">Presente 🎁</button>
+            <button class="btn-link" onclick="motivacao()">Motivação ✨</button>
+            <button class="btn-link" onclick="abraço()">Abraço 🤗</button>
+        </div>
+
+        <img src="foto2.jpg" alt="Momento Especial" class="foto-secundaria">
+
+        <p class="rodape">Feito com 💙 por [Teu Nome]</p>
+    </div>
+
+    <script>
+        function surpresa() {
+            alert("Cheff, tu és como uma nota de 200 meticais pra mim, tu és rara, valiosa e fazes tudo funcionar melhor! 😂 Tens um coração de ouro e uma força que me inspira. Feliz Aniversário! 💙🌟");
+        }
+
+        function presente() {
+            alert("O presente real está a chega... é só me diz no k tás bizz!...mas não fique a vontade ksk!' 🎟️");
+        }
+
+        function motivacao() {
+            alert("Manu, nunca duvides do teu potencial. O mundo é grande, mas tu és gigante! Pega visão gata😌! 💪🚀");
+        }
+
+        function abraço() {
+            alert("A enviar um abraço virtual super apertado em 3... 2... 1... ENVIADO!....ksksk🫂💙");
+        }
+    </script>
+
+</body>
+</html>
